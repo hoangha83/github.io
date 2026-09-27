@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Van Ha Hoang — Probability and Statistics</title>
+<meta name="description" content="Personal academic page of Van Ha Hoang (Hoàng Văn Hà), lecturer and researcher in probability and statistics at University of Science, VNU-HCM. Research interests: nonparametric estimation, inverse problems, mixture models, functional data analysis.">
+<style>
+  :root{
+    --bg:#ffffff;
+    --text:#1f2328;
+    --muted:#5c6570;
+    --accent:#7a1f2b;      /* deep maroon — academic, understated */
+    --accent-soft:#f3ebe9;
+    --line:#e6e3df;
+    --link:#7a1f2b;
+    --max:820px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:17px;
+    line-height:1.6;
+  }
+  a{color:var(--link);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+
+  /* Header */
+  header{border-bottom:1px solid var(--line);padding:38px 0 26px;}
+  .header-inner{display:flex;gap:28px;align-items:center;flex-wrap:wrap;}
+  .photo{
+    width:132px;height:132px;border-radius:50%;
+    object-fit:cover;border:3px solid var(--accent-soft);flex-shrink:0;
+    background:var(--accent-soft);
+  }
+  .header-text h1{margin:0 0 6px;font-size:30px;letter-spacing:.2px;}
+  .header-text .role{color:var(--muted);font-size:16px;margin:0 0 4px;}
+  .header-text .aff{color:var(--muted);font-size:15px;margin:0;}
+
+  /* Nav */
+  nav{
+    position:sticky;top:0;z-index:10;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;gap:22px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px;}
+  nav a{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:14px;text-transform:uppercase;letter-spacing:.6px;
+    color:var(--muted);font-weight:600;
+  }
+  nav a:hover{color:var(--accent);text-decoration:none;}
+
+  /* Sections */
+  section{padding:34px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  h2{
+    font-size:14px;text-transform:uppercase;letter-spacing:1.2px;
+    color:var(--accent);margin:0 0 18px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-weight:700;
+  }
+  p{margin:0 0 14px;}
+
+  ul.clean{list-style:none;margin:0;padding:0;}
+  ul.clean li{
+    padding:10px 0 10px 20px;position:relative;border-bottom:1px solid var(--line);
+  }
+  ul.clean li:last-child{border-bottom:none;}
+  ul.clean li::before{
+    content:"";position:absolute;left:0;top:19px;
+    width:7px;height:7px;border-radius:50%;background:var(--accent);
+  }
+
+  /* Interests as tags */
+  .tags{display:flex;flex-wrap:wrap;gap:10px;}
+  .tag{
+    background:var(--accent-soft);color:var(--accent);
+    padding:7px 14px;border-radius:20px;font-size:15px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  }
+
+  /* Publications */
+  .pub{padding:14px 0;border-bottom:1px solid var(--line);}
+  .pub:last-child{border-bottom:none;}
+  .pub .authors{font-size:16px;}
+  .pub .title{font-weight:bold;}
+  .pub .venue{color:var(--muted);font-size:15px;font-style:italic;}
+  .pub .links{margin-top:4px;font-size:14px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
+  .me{color:var(--accent);}
+  .badge{
+    display:inline-block;font-size:12px;font-weight:700;
+    background:var(--accent);color:#fff;padding:1px 8px;border-radius:4px;
+    margin-left:6px;vertical-align:middle;letter-spacing:.4px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  }
+  .subhead{font-size:16px;font-weight:bold;margin:24px 0 6px;color:var(--text);}
+
+  /* Contact */
+  .contact-grid{font-size:16px;}
+  .contact-grid div{margin-bottom:6px;}
+  .contact-grid .label{color:var(--muted);display:inline-block;min-width:70px;}
+
+  footer{padding:26px 0 40px;color:var(--muted);font-size:14px;text-align:center;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
+
+  @media (max-width:560px){
+    body{font-size:16px;}
+    .header-inner{gap:18px;}
+    .photo{width:100px;height:100px;}
+    .header-text h1{font-size:25px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <!-- Thay ảnh: đặt file 'photo.jpg' cùng thư mục, hoặc xoá thẻ img này -->
+    <img class="photo" src="photo.jpg" alt="Van Ha Hoang"
+         onerror="this.style.display='none'">
+    <div class="header-text">
+      <h1>Van Ha Hoang</h1>
+      <p class="role">Lecturer &amp; Researcher in Probability and Statistics</p>
+      <p class="aff">Faculty of Mathematics and Computer Science<br>
+         University of Science, VNU-HCM</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#talks">Talks</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I am currently a lecturer and researcher in probability and statistics at the
+      Faculty of Mathematics and Computer Science, University of Science in Ho Chi Minh City.
+      Previously, I was a postdoctoral researcher at the
+      <a href="http://lmrs.univ-rouen.fr/" target="_blank" rel="noopener">Laboratoire de Mathématiques Raphaël Salem</a>
+      (LMRS), University of Rouen Normandie (2018&ndash;2020), and before that a temporary lecturer and
+      research assistant (ATER) at the
+      <a href="https://www.imo.universite-paris-saclay.fr/" target="_blank" rel="noopener">Laboratoire de Mathématiques d'Orsay</a>,
+      University of Paris-Sud 11 (2017&ndash;2018).</p>
+    <p>I obtained my Ph.D. in statistics on 28 November 2016 at the University of Lille 1, France,
+      under the supervision of
+      <a href="https://perso.math.u-pem.fr/tran.viet-chi/" target="_blank" rel="noopener">Viet Chi Tran</a>
+      (University Gustave Eiffel),
+      <a href="https://www.imo.universite-paris-saclay.fr/~phamngoc/" target="_blank" rel="noopener">Thanh Mai Pham Ngoc</a>
+      (University Paris-Sud) and
+      <a href="https://www.ceremade.dauphine.fr/~rivoirar/" target="_blank" rel="noopener">Vincent Rivoirard</a>
+      (University Paris Dauphine).</p>
+  </section>
+
+  <section id="research">
+    <h2>Research Interests</h2>
+    <div class="tags">
+      <span class="tag">Nonparametric estimation</span>
+      <span class="tag">Inverse problems</span>
+      <span class="tag">Mixture models &amp; functional data analysis</span>
+      <span class="tag">Stochastic models for population dynamics</span>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Preprints &amp; Publications</h2>
+
+    <div class="pub">
+      <div class="authors"><span class="me">Van Ha Hoang</span>, Tien Dat Nguyen, T. Mong Ngoc Nguyen.</div>
+      <div class="title">Adaptive density estimation using projection kernels and Penalized Comparison to Overfitting.</div>
+      <div class="venue">2025. Submitted.</div>
+      <div class="links"><a href="https://arxiv.org/abs/2509.07800" target="_blank" rel="noopener">arXiv</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="authors"><span class="me">Van Ha Hoang</span>, Phu Thanh Nguyen, Thanh Mai Pham Ngoc, Vincent Rivoirard, Viet Chi Tran.</div>
+      <div class="title">Goodness-of-fit testing for the stationary density of a size-structured PDE.</div>
+      <div class="venue">2025. Submitted.</div>
+      <div class="links"><a href="https://arxiv.org/pdf/2506.05103" target="_blank" rel="noopener">arXiv</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="authors">Binh H. Ho, Long Nguyen Chi, Trung Tin Nguyen, Binh T. Nguyen, <span class="me">Van Ha Hoang</span>, Christopher Drovandi.</div>
+      <div class="title">A Unified Framework for Variable Selection in Model-Based Clustering with Missing Not at Random. <span class="badge">NeurIPS 2025</span></div>
+      <div class="links"><a href="https://arxiv.org/abs/2505.19093" target="_blank" rel="noopener">arXiv</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="authors">D. T. Dang, <span class="me">V. H. Hoang</span>, and P. H. Thai.</div>
+      <div class="title">Nonparametric density estimation for stationary processes under multiplicative measurement errors.</div>
+      <div class="venue">Journal of Nonparametric Statistics, 2025, 1&ndash;30.</div>
+      <div class="links"><a href="https://doi.org/10.1080/10485252.2025.2532518" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="authors"><a href="https://chamroukhi.com/" target="_blank" rel="noopener">F. Chamroukhi</a>, <a href="https://nhatthien.com/" target="_blank" rel="noopener">N. T. Pham</a>, <span class="me">V. H. Hoang</span> and G. J. McLachlan.</div>
+      <div class="title">Functional Mixtures-of-Experts.</div>
+      <div class="venue">Statistics and Computing, Vol. 34, 98 (2024).</div>
+      <div class="links"><a href="https://link.springer.com/article/10.1007/s11222-023-10379-0" target="_blank" rel="noopener">Article / PDF</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="authors">T. Nguyen, T. N. Phan, <span class="me">V. H. Hoang</span>, P. Halvorsen, M. A. Riegler, B. Nguyen.</div>
+      <div class="title">Efficient parameter estimation for missing data when many features are fully observed.</div>
+      <div class="venue">2022. Submitted.</div>
+      <div class="links"><a href="https://www.researchsquare.com/article/rs-2878000/v1" target="_blank" rel="noopener">Available here</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="authors"><a href="http://gchagny.perso.math.cnrs.fr/" target="_blank" rel="noopener">G. Chagny</a>, <a href="http://lmrs.math.cnrs.fr/Persopage/Channarond/index.html" target="_blank" rel="noopener">A. Channarond</a>, <span class="me">V. H. Hoang</span> and <a href="https://www.ceremade.dauphine.fr/~roche/" target="_blank" rel="noopener">A. Roche</a>.</div>
+      <div class="title">Adaptive nonparametric estimation of a component density in a two-class mixture model.</div>
+      <div class="venue">Journal of Statistical Planning and Inference, Vol. 216, Jan 2022, 51&ndash;69.</div>
+      <div class="links"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0378375821000495" target="_blank" rel="noopener">Article</a> &middot; <a href="https://drive.google.com/file/d/1An3ggbiw1KT3qnEZj2l5xjk6gq_9Po65/view?usp=sharing" target="_blank" rel="noopener">PDF</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="authors"><span class="me">V. H. Hoang</span>, T. M. Pham Ngoc, V. Rivoirard and <a href="https://perso.math.u-pem.fr/tran.viet-chi/" target="_blank" rel="noopener">V. C. Tran</a>.</div>
+      <div class="title">Nonparametric estimation of the fragmentation kernel based on a PDE stationary distribution approximation.</div>
+      <div class="venue">Scandinavian Journal of Statistics, Vol. 49 (2022), Issue 1, 4&ndash;43.</div>
+      <div class="links"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/sjos.12504" target="_blank" rel="noopener">Article</a> &middot; <a href="https://drive.google.com/file/d/1KgMQeM86bSDzMiE9e05NYCfLsbvk8ptX/view?usp=sharing" target="_blank" rel="noopener">PDF</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="authors">M. Chichignoud, <span class="me">V. H. Hoang</span>, <a href="https://www.imo.universite-paris-saclay.fr/~phamngoc/" target="_blank" rel="noopener">T. M. Pham Ngoc</a> and <a href="https://www.ceremade.dauphine.fr/~rivoirar/" target="_blank" rel="noopener">V. Rivoirard</a>.</div>
+      <div class="title">Adaptive wavelet multivariate regression with errors in variables.</div>
+      <div class="venue">Electronic Journal of Statistics, Vol. 11, No. 1 (2017), 682&ndash;724.</div>
+      <div class="links"><a href="https://projecteuclid.org/euclid.ejs/1488964114" target="_blank" rel="noopener">Article</a> &middot; <a href="https://drive.google.com/file/d/1xOdIPE_uOhK2tnI3gNiDQnLoaBXav_tm/view?usp=sharing" target="_blank" rel="noopener">PDF</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="authors"><span class="me">V. H. Hoang</span>.</div>
+      <div class="title">Estimating the Division Kernel of a Size-Structured Population.</div>
+      <div class="venue">ESAIM: Probability and Statistics, Vol. 21 (2017), 275&ndash;302.</div>
+      <div class="links"><a href="https://www.esaim-ps.org/articles/ps/abs/2017/01/ps170037/ps170037.html" target="_blank" rel="noopener">Article</a> &middot; <a href="https://drive.google.com/file/d/12YYFKQ_adSHhUdHhqmPfWgOwYCsb3Uz4/view?usp=sharing" target="_blank" rel="noopener">PDF</a></div>
+    </div>
+
+    <div class="subhead">Publications in Other Disciplines</div>
+
+    <div class="pub">
+      <div class="authors">Thuy Thanh Doan Nguyen, Khanh Hai Nguyen, Loc Minh Le, Chen-Yu Yeh, Masamichi Yoshimura, <span class="me">Ha Van Hoang</span>, Phuong Tuyet Nguyen.</div>
+      <div class="title">Effects of EDTA used as a hole scavenger on UV-assisted photoreduction of graphene oxide on the surface of TiO&#8322;.</div>
+      <div class="venue">Ceramics International, 2025.</div>
+      <div class="links"><a href="https://doi.org/10.1016/j.ceramint.2025.12.245" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="authors">Duyen My Thi Dương, Em Hoang Danh, De Nguyen, <span class="me">Van Ha Hoang</span>, Thuy Thanh Doan Nguyen, Che-Yu Yeh, Phuong Tuyet Nguyen.</div>
+      <div class="title">Deep-eutectic-solvent electrolytes comprising 1-ethyl-3-methylimidazolium iodide, iodine, and urea for dye-sensitized solar cells.</div>
+      <div class="venue">Journal of Molecular Liquids, Vol. 423, 2025, 127014.</div>
+      <div class="links"><a href="https://doi.org/10.1016/j.molliq.2025.127014" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="authors">De Nguyen, <span class="me">Van Ha Hoang</span>, Phuong Ha Thi Ngo, Tho Anh Ngoc Vo, Thuy Thanh Doan Nguyen, Phuong Tuyet Nguyen.</div>
+      <div class="title">Urea-Acetamide-Based deep eutectic compound as novel, eco-friendly additives in stable and efficient dye-sensitized solar cells.</div>
+      <div class="venue">Electrochimica Acta, Vol. 487, 2024, 144156.</div>
+      <div class="links"><a href="https://doi.org/10.1016/j.electacta.2024.144156" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="authors">Thuy Thanh Doan Nguyen, De Nguyen, Phu Phong Vo, Hoan Ngoc Doan, Huu Thinh Nguyen Pham, <span class="me">Van Ha Hoang</span>, Khoa Tien Le, Kenji Kinashi, Vu Tan Huynh, Phuong Tuyet Nguyen.</div>
+      <div class="title">The roles of ethanol and isopropanol as hole scavengers in the photoreduction reaction of graphene oxide by TiO&#8322;.</div>
+      <div class="venue">Journal of Molecular Liquids, Vol. 381, 2023, 121831.</div>
+      <div class="links"><a href="https://www.sciencedirect.com/science/article/pii/S0167732223006347" target="_blank" rel="noopener">Article</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="authors">Thuy Thanh Doan Nguyen, De Nguyen, Hoan Ngoc Doan, Phu Phong Vo, Vu Tan Huynh, <span class="me">Van Ha Hoang</span>, Thang Bach Phan, Kenji Kinashi, Phuong Tuyet Nguyen.</div>
+      <div class="title">In-depth understanding of the photoreduction of graphene oxide to reduced-graphene oxide on TiO&#8322; surface: statistical analysis of XPS and Raman spectroscopy data.</div>
+      <div class="venue">Applied Surface Science, Vol. 581, 2021, 152325.</div>
+      <div class="links"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0169433221033468" target="_blank" rel="noopener">Article</a></div>
+    </div>
+
+    <div class="subhead">Other Works</div>
+    <div class="pub">
+      <div class="title">Ph.D. thesis: Adaptive estimation for inverse problems with applications to cell divisions.</div>
+      <div class="links"><a href="https://drive.google.com/file/d/1HI0in3mxxDtTns1jBke-mqedbSaxz2fz/view?usp=sharing" target="_blank" rel="noopener">PDF</a></div>
+    </div>
+  </section>
+
+  <section id="talks">
+    <h2>Talks</h2>
+    <ul class="clean">
+      <li><a href="https://sites.google.com/view/vietnam-japanjointworkshop/home" target="_blank" rel="noopener">Vietnam-Japan Joint Workshop on Applied Mathematics</a>, Ritsumeikan University, BKC, Shiga, Japan, October 2025.</li>
+      <li><a href="https://sites.google.com/essec.edu/hdda-xiii/" target="_blank" rel="noopener">The 13th Workshop on High Dimensional Data Analysis (HDDA-XIII)</a> (invited talk), ESSEC Business School, Asia-Pacific campus, Singapore, August 27&ndash;30, 2024.</li>
+      <li>Séminaire de probabilités et statistiques, <a href="http://lama.u-pem.fr/" target="_blank" rel="noopener">LAMA, Université Gustave Eiffel</a>, September 2023.</li>
+      <li>10th Vietnam Mathematical Congress 2023, <a href="https://viasm.edu.vn/hdkh/dhthtq2023?userkey=bao-cao-moi-tieu-ban" target="_blank" rel="noopener">Invited talk, Probability &ndash; Statistics &ndash; Data Science session</a>, Đà Nẵng, August 2023.</li>
+      <li><a href="http://sems.ueh.edu.vn/tin-tuc/-thong-bao-ve-workshop-thong-ke-bayesian---8h00----17h50-ngay-16-thang-7-nam-2022-325" target="_blank" rel="noopener">Workshop on Bayesian Statistics</a>, UEH University, July 2023.</li>
+      <li><a href="http://math.ac.vn/en/xac-suat-va-thong-ke/month.calendar/2022/05/03/-.html" target="_blank" rel="noopener">Seminar on Probability and Mathematical Statistics</a>, Institute of Mathematics, VAST, May 2022.</li>
+      <li>Symposium on Academic and Campus Cultural Exchange, National Chung Hsing University, January 2022.</li>
+      <li><a href="https://mimo2021.sciencesconf.org/resource/page/id/4" target="_blank" rel="noopener">MiMo2021 &ndash; Workshop on Mixture Models</a>, LMRS, University of Rouen Normandie, April 2021.</li>
+      <li><a href="http://normandie.math.cnrs.fr/Journees/Journee11/index.html" target="_blank" rel="noopener">11e journée de la Fédération Normandie-Mathématiques</a>, Le Havre, Normandie, June 2019.</li>
+      <li><a href="https://www.lmno.cnrs.fr/?q=seminaires/statprobasdonnees" target="_blank" rel="noopener">Groupe de travail de Statistique et Sciences des données du LMNO</a>, Univ. of Caen-Normandie, March 2019.</li>
+      <li>Groupe de travail de Statistique du LMRS, Univ. of Rouen-Normandie, September 2018.</li>
+      <li><a href="http://www.cmap.polytechnique.fr/chaire-mmb/Aussois2017.html" target="_blank" rel="noopener">École de recherche de la Chaire MMB</a>, Aussois, June 2017.</li>
+      <li>Probability and Statistics seminar, Laboratoire de Mathématiques d'Orsay, Univ. Paris-Sud 11, April 2017.</li>
+      <li>Séminaire de Statistique de l'IRMAR, Univ. of Rennes 1, November 2016.</li>
+      <li><a href="http://jps.math.cnrs.fr/" target="_blank" rel="noopener">Colloque Jeunes Probabilistes et Statisticiens</a>, Les Houches, April 2016.</li>
+      <li>MASCOT-NUM 2016 meeting (Poster), Toulouse, March 2016.</li>
+      <li><a href="http://math.univ-lille1.fr/d7/node/8827" target="_blank" rel="noopener">Probability and Statistics seminar</a>, Laboratoire Paul Painlevé, Lille, February 2016.</li>
+      <li>47ème Journées de Statistique de la SFdS, Lille, June 2015.</li>
+      <li><a href="https://indico.math.cnrs.fr/event/446/overview" target="_blank" rel="noopener">Journée des Doctorants en Mathématiques</a>, Lille, September 2014.</li>
+    </ul>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <ul class="clean">
+      <li>STAT452 &mdash; Statistical Learning</li>
+      <li>MTH10131 &mdash; Lý thuyết thống kê (Statistical Theory)</li>
+    </ul>
+    <p style="color:var(--muted);font-size:15px;">
+      <!-- Thầy bổ sung hoặc chỉnh danh sách học phần tại đây. -->
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div><span class="label">Address</span>
+        <a href="https://www.math.hcmus.edu.vn/" target="_blank" rel="noopener">Faculty of Mathematics and Computer Science</a>,
+        <a href="https://www.hcmus.edu.vn/" target="_blank" rel="noopener">University of Science</a>, VNU-HCM</div>
+      <div><span class="label"></span>227 Nguyen Van Cu Street, District 5, Ho Chi Minh City, Vietnam</div>
+      <div><span class="label">Office</span>F12</div>
+      <div><span class="label">Email</span>hvha <em>(at)</em> hcmus.edu.vn</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Van Ha Hoang. Built with GitHub Pages.
+</footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+
+</body>
+</html>
